@@ -1,65 +1,97 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; }
 
 body {
+  margin: 0;
   font-family: "Inter", sans-serif;
-  color: #222;
-  background: #f9f9f9;
-  line-height: 1.6;
+  background: #f2f2f2;
+  color: #1f1f1f;
+  line-height: 1.7;
 }
 
-header {
-  background: white;
-  padding: 1.5rem;
-  border-bottom: 1px solid #ececec;
+/* Landing */
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
 }
 
-nav a {
-  margin-right: 1rem;
+.landing-container {
+  text-align: center;
+}
+
+.landing-links a {
+  margin: 0 0.8rem;
   text-decoration: none;
   font-weight: 500;
   color: #333;
 }
 
-main {
+/* Layout */
+.layout { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #fff;
+  padding: 3rem 2rem;
+  border-right: 1px solid #e4e4e4;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar nav a {
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Content */
+.content {
+  margin-left: 260px;
+  padding: 4rem;
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.hero {
-  padding: 4rem 0;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
 }
 
 h2 {
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.4rem;
 }
 
-.section {
-  margin-bottom: 2rem;
-}
-
-.portfolio-grid {
+/* Projects */
+.projects {
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
 
-.portfolio-item {
-  background: white;
-  border: 1px solid #ececec;
+.project {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  padding: 1.5rem;
+}
+
+/* Blog */
+.tag {
+  background: #eaeaea;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  margin-right: 0.4rem;
+  cursor: pointer;
+}
+
+/* Mobile */
+.mobile-nav {
+  display: none;
+  background: #fff;
   padding: 1rem;
-  border-radius: 6px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .content { margin-left: 0; padding: 2rem 1.5rem; }
+  .mobile-nav { display: block; }
 }
