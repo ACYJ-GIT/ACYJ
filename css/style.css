@@ -120,3 +120,79 @@ h2 {
   .content { margin-left: 0; padding: 2rem 1.5rem; }
   .mobile-nav { display: block; }
 }
+
+---
+
+/* Landing Page */
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffffff;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.landing-profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #FF5A5F; /* Wix accent border */
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.landing h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.landing .subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.landing-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.landing-links .btn {
+  padding: 0.7rem 1.5rem;
+  font-weight: 500;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #fff;
+  background: #FF5A5F; /* accent color */
+  transition: all 0.3s;
+}
+
+.landing-links .btn:hover {
+  background: #e04a4f;
+}
+
+.landing-links .btn-secondary {
+  background: #333;
+}
+
+.landing-links .btn-secondary:hover {
+  background: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .landing h1 { font-size: 1.8rem; }
+  .landing .subtitle { font-size: 1rem; }
+  .landing-links .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+}
