@@ -31,6 +31,7 @@ body {
   width: 12px;
   height: 12px;
   background: #0057ff;
+  border-radius: 50%;
 }
 
 .job {
@@ -64,11 +65,15 @@ body {
 
 .bg-box {
   position: absolute;
-  width: 320px;
-  height: 420px;
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  height: 460px;
   background: #e9dfd5;
-  top: -40px;
-  left: -80px;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .profile-card {
@@ -77,6 +82,8 @@ body {
   background: #f6eee6;
   padding: 40px 30px;
   text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .profile-card img {
@@ -104,11 +111,21 @@ body {
 .profile-card .role {
   font-size: 12px;
   letter-spacing: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+/* SOCIALS WHITE BOX */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #fff;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .socials span {
-  margin: 0 8px;
   font-size: 14px;
   cursor: pointer;
 }
@@ -172,10 +189,9 @@ body {
 
 /* =======================
    RESPONSIVE
-   ======================= */
+======================= */
 
 @media (max-width: 768px) {
-
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -195,8 +211,8 @@ body {
   }
 
   .bg-box {
-    left: 50%;
-    transform: translateX(-50%);
+    width: 300px;
+    height: 380px;
   }
 
   .right h1 {
@@ -216,7 +232,6 @@ body {
 }
 
 @media (max-width: 480px) {
-
   .right h1 {
     font-size: 42px;
   }
