@@ -1,36 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anthony Chen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="landing">
+<body>
 
-<main class="landing-container">
-  <!-- Profile Image -->
-  <img src="assets/profile.jpg" alt="Profile Image" class="landing-profile-img">
-  
-  <h1>Anthony - Chen Yi Jin</h1>
-    <p>Agile • Product • Learning • Thinker • Writer</p>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="name">Anthony Chen</span>
+      <span class="slash">/</span>
+      <span class="job">Job</span>
+    </div>
 
-  <div class="landing-links">
-    <a href="cv.html">View CV</a>
-    <a href="blog.html">Read Blog</a>
-  </div>
+    <nav class="nav-links">
+      <a class="active" ="index.html">ABOUT ME</a>
+      <a href="cv.html">CV</a>
+      <a href="blog.html">Blog</a>
+      <!---
+      <a href="#">CV</a>
+      <a href="#">Blog</a>-->
+    </nav>
+  </header>
 
-  <section class="section">
-    <h2>About Me</h2>
-    <p>Hi — I’m Anthony. This site hosts my resume, portfolio of projects, and my writing.</p>
-  </section>
-</main>
+  <!-- HERO SECTION -->
+  <main class="hero">
+    <div class="left">
+      <div class="bg-box"></div>
+
+      <div class="profile-card">
+        <img src="profile.jpg" alt="Profile photo">
+
+        <h2>Anthony<br>Chen</h2>
+        <span class="line"></span>
+        <p class="role">Role</p>
+
+        <div class="socials">
+          <span>f</span>
+          <span>t</span>
+          <span>in</span>
+          <span>◎</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <h1>Hello!</h1>
+      <h3>Here's who I am & what I do</h3>
+
+      <div class="actions">
+        <a class="btn primary" href="cv.html">RESUME</a>
+        <a class="btn outline" href="project.html">PROJECTS</a>
+      </div>
+
+      <p>Hi! I’m Anthony. This site hosts my resume, portfolio of projects, and my writing.</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="copyright">
+      <p>© 2026 by Anthony Chen.</p>
+      <p class="muted">Powered and secured by GitHub Pages</p>
+    </div>
+
+    <div class="footer-info">
+      <div>
+        <strong>Call</strong>
+        <p>???</p>
+      </div>
+      <div>
+        <strong>Write</strong>
+        <p>???@mysite.com</p>
+      </div>
+      <div>
+        <strong>Follow</strong>
+        <p>f t in ◎</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
