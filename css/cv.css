@@ -1,8 +1,6 @@
 /* =======================
-   CV PAGE SPECIFIC CSS
+   CV PAGE
 ======================= */
-
-/* PAGE LAYOUT */
 .cv-main {
   display: flex;
   flex-direction: column;
@@ -10,15 +8,20 @@
   padding: 60px;
 }
 
-/* SUMMARY */
+/* profile image consistency */
+.cv-main img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* summary */
 .cv-summary {
   background: var(--bg-card);
   padding: 25px;
   border-radius: var(--radius-card);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* EXPERIENCE / EDUCATION BOXES */
+/* sections */
 .cv-section h2 {
   font-size: 28px;
   margin-bottom: 20px;
@@ -29,26 +32,13 @@
   padding: 20px 25px;
   border-radius: var(--radius-card);
   margin-bottom: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.cv-box:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* EDUCATION TIMELINE */
+/* timeline */
 .timeline {
-  position: relative;
   margin-left: 20px;
   padding-left: 20px;
   border-left: 2px solid var(--primary-color);
-}
-
-.timeline-item {
-  margin-bottom: 20px;
-  position: relative;
 }
 
 .timeline-item::before {
@@ -62,7 +52,7 @@
   border-radius: 50%;
 }
 
-/* SKILLS BADGES */
+/* skills */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -73,17 +63,9 @@
 .skills-list li {
   padding: 6px 12px;
   border-radius: var(--radius-card);
-  background: var(--bg-card);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.skills-list li:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
-
-/* BUTTON */
+/* button */
 .cv-btn {
   display: inline-block;
   padding: 12px 30px;
@@ -91,23 +73,4 @@
   background: var(--primary-color);
   color: #fff;
   text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.cv-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .cv-main {
-    padding: 40px 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .cv-main {
-    padding: 20px 15px;
-  }
 }
