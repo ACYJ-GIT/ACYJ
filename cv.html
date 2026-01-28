@@ -3,77 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV – Anthony Chen</title>
+  <title>Anthony Chen - CV</title>
 
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <button class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
 
-  <!-- NAV -->
-  <header class="navbar">
-    <div class="brand">
-      <span class="dot"></span>
-      <span class="name">Anthony Chen</span>
-      <span class="slash">/</span>
-      <span class="job">CV</span>
+<header class="navbar">
+  <div class="brand">
+    <span class="dot"></span>
+    <span>Anthony Chen</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">ABOUT</a>
+    <a class="active" href="cv.html">CV</a>
+    <a href="blog.html">BLOG</a>
+    <button id="themeToggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+</header>
+
+<main class="hero fade-in">
+
+  <!-- LEFT COLUMN: CV Photo & Info -->
+  <section class="hero-left reveal">
+    <div class="bg-box"></div>
+
+    <div class="profile-card hover-card">
+      <img src="profile.jpg" alt="Anthony Chen">
+
+      <h2>Anthony<br>Chen</h2>
+      <span class="divider"></span>
+      <p class="role">Product / Tech</p>
+
+      <div class="social-bar">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIGHT COLUMN: CV Content -->
+  <section class="hero-right reveal">
+
+    <h1>Curriculum Vitae</h1>
+    <h3>Professional Experience & Skills</h3>
+
+    <div class="cv-section">
+      <h4>Experience</h4>
+      <ul>
+        <li>
+          <strong>Scrum Master – Ufinity Pte Ltd (Feb 2022 – Present)</strong>
+          <p>Leading MOM WINS project squads, defining ODC processes.</p>
+        </li>
+        <li>
+          <strong>IT Business Analyst – Kelly Services Asia Pacific (Mar 2014 – Apr 2015)</strong>
+          <p>Requirement elicitation and coordination for testing and enhancements.</p>
+        </li>
+        <!-- Add more experiences here -->
+      </ul>
     </div>
 
-    <nav class="nav-links">
-      <a href="index.html">ABOUT ME</a>
-      <a class="active" href="cv.html">CV</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-  </header>
-
-  <!-- CONTENT -->
-  <main class="page fade-in">
-    <section class="page-header">
-      <h1>Curriculum Vitae</h1>
-      <p>Professional experience & background</p>
-    </section>
-
-    <section class="card reveal">
-      <h2>Experience</h2>
-
-      <div class="timeline-item">
-        <h3>Project Manager / Scrum Master</h3>
-        <span class="meta">2022 – Present · Ufinity</span>
-        <p>
-          Leading agile delivery teams, managing stakeholders, and defining
-          offshore development processes.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Senior Scrum Master</h3>
-        <span class="meta">2021 – 2022 · Optimum Solutions</span>
-        <p>
-          Squad lead for UOB TMRW mobile app (Engagement module).
-        </p>
-      </div>
-    </section>
-
-    <section class="card reveal">
-      <h2>Skills</h2>
-      <ul class="pill-list">
-        <li>Agile & Scrum</li>
-        <li>Stakeholder Management</li>
-        <li>Product Thinking</li>
-        <li>ODC Setup</li>
-        <li>Business Analysis</li>
+    <div class="cv-section">
+      <h4>Education</h4>
+      <ul>
+        <li>
+          <strong>Bachelor’s in Computer Science</strong>
+          <p>University Name, Year</p>
+        </li>
       </ul>
-    </section>
-  </main>
+    </div>
 
-  <script>
-    document.querySelector(".theme-toggle")
-      .addEventListener("click", () =>
-        document.body.classList.toggle("dark")
-      );
-  </script>
+    <div class="cv-section">
+      <h4>Skills</h4>
+      <ul class="skills-list">
+        <li>Scrum & Agile</li>
+        <li>Project Management</li>
+        <li>Product Design</li>
+        <li>Stakeholder Management</li>
+        <li>Analytical Thinking</li>
+      </ul>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2026 Anthony Chen</p>
+    <p class="muted">Powered and secured by GitHub Pages</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
