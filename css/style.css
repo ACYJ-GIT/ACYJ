@@ -29,7 +29,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: var(--max-content-width);
-  padding-top: 90px; /* space for sticky navbar */
+  padding-top: 90px; /* space for fixed navbar */
 }
 
 html {
@@ -56,11 +56,13 @@ body.dark-mode .skills-list li {
 }
 
 /* =======================
-   STICKY HEADER
+   FIXED HEADER
 ======================= */
 .navbar {
-  position: sticky;
+  position: fixed;    /* fixed at top */
   top: 0;
+  left: 0;
+  width: 100%;        /* full width */
   z-index: 1000;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -202,7 +204,7 @@ body.dark-mode .navbar {
 /* =======================
    RESPONSIVE
 ======================= */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navbar {
     padding: 20px 40px;
   }
@@ -212,7 +214,17 @@ body.dark-mode .navbar {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px; /* adjust for smaller navbar height */
+  }
+}
+
 @media (max-width: 480px) {
+  body {
+    padding-top: 70px;
+  }
+
   .btn {
     width: 100%;
     text-align: center;
