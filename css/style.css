@@ -108,6 +108,31 @@ body.dark-mode .navbar {
 }
 
 /* =======================
+   BULLETS
+======================= */
+.bullet {
+  display: flex;
+  flex-direction: column; /* stack bullets vertically */
+  gap: 8px; /* spacing between bullets */
+  margin-bottom: 30px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.bullet-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between dot and text */
+}
+
+.bullet-item .dot {
+  width: 8px;   /* smaller than profile dot */
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* =======================
    BUTTONS
 ======================= */
 .btn {
