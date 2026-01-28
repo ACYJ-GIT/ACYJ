@@ -70,12 +70,18 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* EDUCATION TIMELINE */
+/* EDUCATION TIMELINE 
 .timeline {
   position: relative;
   margin-left: 20px;
   padding-left: 20px;
   border-left: 2px solid var(--primary-color);
+}*/
+
+.timeline {
+  border-left: 1.5px solid var(--primary-color);
+  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .timeline-item {
