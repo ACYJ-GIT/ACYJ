@@ -110,10 +110,11 @@ body.dark-mode .navbar {
 /* =======================
    BULLETS
 ======================= */
+/* Role bullets inside profile card */
 .bullet {
   display: flex;
-  flex-direction: column; /* stack bullets vertically */
-  gap: 8px; /* spacing between bullets */
+  flex-direction: column; /* stack vertically */
+  gap: 8px;
   margin-bottom: 30px;
   font-size: 12px;
   letter-spacing: 1px;
@@ -126,10 +127,11 @@ body.dark-mode .navbar {
 }
 
 .bullet-item .dot {
-  width: 8px;   /* smaller than profile dot */
-  height: 8px;
-  background: var(--primary-color);
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color); /* ensure matches brand */
   border-radius: 50%;
+  flex-shrink: 0; /* prevent dot from shrinking in flex */
 }
 
 /* =======================
