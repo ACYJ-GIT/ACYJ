@@ -5,24 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anthony Chen</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- DARK MODE TOGGLE -->
-  <button class="theme-toggle" aria-label="Toggle dark mode">
-    <i class="fa-solid fa-moon"></i>
-  </button>
 
   <!-- NAVBAR -->
   <header class="navbar">
@@ -41,45 +28,48 @@
   </header>
 
   <!-- HERO -->
-  <main class="hero fade-in">
-    <div class="left reveal">
+  <main class="hero">
+
+    <!-- LEFT COLUMN -->
+    <section class="hero-left">
       <div class="bg-box"></div>
 
       <div class="profile-card">
-        <img src="profile.jpg" alt="Profile photo" />
+        <img src="profile.jpg" alt="Anthony Chen">
 
-        <h2>Anthony<br />Chen</h2>
-        <span class="line"></span>
-        <p class="role">Project Manager / Scrum Master</p>
+        <h2>Anthony<br>Chen</h2>
+        <span class="divider"></span>
+        <p class="role">Role</p>
 
-        <div class="socials">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <div class="social-bar">
+          <span>f</span>
+          <span>t</span>
+          <span>in</span>
+          <span>◎</span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="right reveal">
+    <!-- RIGHT COLUMN -->
+    <section class="hero-right">
       <h1>Hello!</h1>
-      <h3>Here’s who I am & what I do</h3>
+      <h3>Here's who I am & what I do</h3>
 
       <div class="actions">
-        <a class="btn primary" href="cv.html">RESUME</a>
-        <a class="btn outline" href="project.html">PROJECTS</a>
+        <a href="cv.html" class="btn primary">RESUME</a>
+        <a href="project.html" class="btn outline">PROJECTS</a>
       </div>
 
       <p>
-        Hi! I’m Anthony. This site hosts my resume, portfolio of projects,
-        and my writing.
+        Hi! I’m Anthony. This site hosts my resume, portfolio of projects, and my writing.
       </p>
-    </div>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer reveal">
-    <div class="copyright">
+  <footer class="footer">
+    <div>
       <p>© 2026 by Anthony Chen.</p>
       <p class="muted">Powered and secured by GitHub Pages</p>
     </div>
@@ -95,17 +85,10 @@
       </div>
       <div>
         <strong>Follow</strong>
-        <p>Facebook · X · LinkedIn · Instagram</p>
+        <p>f t in ◎</p>
       </div>
     </div>
   </footer>
 
-  <!-- DARK MODE SCRIPT -->
-  <script>
-    const toggle = document.querySelector(".theme-toggle");
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-    });
-  </script>
 </body>
 </html>
