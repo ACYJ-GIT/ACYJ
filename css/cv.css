@@ -92,7 +92,7 @@
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -7px;    /* slightly closer to line */
+  left: -5px;    /* slightly closer to line */
   top: 10px;     /* center vertically with text */
   width: 6px;    /* smaller bullet */
   height: 6px;
