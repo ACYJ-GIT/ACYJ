@@ -5,7 +5,7 @@ const toggle = document.getElementById('themeToggle');
 
 // Function to apply dark mode
 function applyDarkMode(isDark) {
-  document.body.classList.toggle('dark', isDark);
+  document.body.classList.toggle('dark-mode', isDark);
   
   // Update toggle UI (if checkbox)
   if (toggle.type === 'checkbox') {
@@ -23,7 +23,7 @@ applyDarkMode(savedTheme === 'true');
 
 // Toggle click handler
 toggle.addEventListener('click', () => {
-  const isDark = !document.body.classList.contains('dark');
+  const isDark = !document.body.classList.contains('dark-mode');
   applyDarkMode(isDark);
   localStorage.setItem('theme', isDark);
 });
