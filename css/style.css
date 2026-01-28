@@ -55,37 +55,6 @@ body.dark-mode .skills-list li {
   background: #2a2a2a;
 }
 
-/* Dark mode text/background fixes */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-
-  .hero, .container {
-    background-color: #1a1a1a;
-  }
-
-  /* Ensure text contrast in profile / intro section */
-  .hero-text,
-  .hero-text h1,
-  .hero-text h2,
-  .hero-text p,
-  .hero-text a {
-    color: #e0e0e0 !important;
-  }
-
-  /* Optional: lighten link colors */
-  .hero-text a {
-    color: #8ab4f8 !important;
-  }
-
-  /* Make sure any background boxes are darker */
-  .hero {
-    background-color: #181818;
-  }
-}
-
 /* =======================
    FIXED HEADER
 ======================= */
