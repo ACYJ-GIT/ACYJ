@@ -107,6 +107,22 @@ body.dark-mode .navbar {
   color: var(--primary-color);
 }
 
+.nav-links #themeToggle {
+  margin-left: 30px;       /* same as nav links */
+  background: none;        /* remove default button styling */
+  border: none;            /* remove border */
+  cursor: pointer;         /* pointer cursor */
+  font-size: 13px;         /* match link font-size */
+  color: inherit;          /* inherit text color */
+  padding: 0;              /* remove default padding */
+}
+
+.nav-links #themeToggle:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+  transition: transform 0.2s, color 0.2s;
+}
+
 /* =======================
    BUTTONS
 ======================= */
