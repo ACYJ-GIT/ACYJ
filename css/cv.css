@@ -86,7 +86,7 @@
   content: '';
   position: absolute;
   left: -10px;      /* aligns bullet over timeline line */
-  top: 10px;        /* centers bullet vertically with year/text */
+  top: 8px;        /* centers bullet vertically with year/text */
   width: 6px;      /* smaller bullet */
   height: 6px;
   background: var(--primary-color);
