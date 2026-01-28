@@ -212,6 +212,62 @@ body {
   color: var(--muted);
 }
 
+/* CV SECTION STYLES */
+.cv-block {
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-left: 6px solid var(--accent);
+  padding-left: 12px;
+}
+
+.cv-box {
+  background: var(--card);
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px var(--shadow);
+  margin-bottom: 15px;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.cv-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+.cv-box h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cv-date {
+  font-size: 13px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.skills-list li {
+  background: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .hero {
