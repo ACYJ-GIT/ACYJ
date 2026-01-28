@@ -74,7 +74,7 @@
 .timeline {
   border-left: 1.5px solid var(--primary-color);
   margin-left: 20px;
-  padding-left: 40px; /* increased spacing between bullet and text */
+  padding-left: 50px; /* increased spacing between bullet and text */
 }
 
 .timeline-item {
