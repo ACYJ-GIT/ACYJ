@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anthony Chen | Blog</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Anthony Chen's blog: insights on AI, Agile, Product Management, and project delivery.">
+  <meta name="keywords" content="Anthony Chen, blog, AI, Agile, Product, Project Management">
+  <meta name="author" content="Anthony Chen">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Anthony Chen | Blog">
+  <meta property="og:description" content="Insights on AI, Agile, Product Management, and project delivery.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://acyj-git.github.io/ACYJ/blog.html">
+  <meta property="og:image" content="./img/Profile.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="name">Anthony Chen</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="./index.html">ABOUT ME</a>
+      <a href="./cv.html">CV</a>
+      <a class="active" href="./blog.html">BLOG</a>
+      <button id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO / PAGE HEADER -->
+  <main class="hero">
+    <div class="left">
+      <div class="bg-box"></div>
+
+      <div class="profile-card fade-in">
+        <img src="./img/Profile.png" alt="Anthony Chen">
+        <h2>Anthony<br>Chen</h2>
+        <span class="line"></span>
+        <p class="role">AI | Product | Agile</p>
+        <p class="role">Writer | Thinker</p>
+      </div>
+    </div>
+
+    <div class="right fade-in">
+      <h1>Blog</h1>
+      <h3>Thoughts, insights, and experiences</h3>
+      <p>Welcome to my blog corner. Here I share insights on AI, Agile, Product Management, and project delivery, along with reflections from my professional journey. New articles will be added regularly.</p>
+    </div>
+  </main>
+
+  <!-- BLOG POSTS SECTION -->
+  <section class="cv-main fade-in">
+    <div class="cv-section">
+      <h2>Latest Posts</h2>
+
+      <!-- Blog Post Card -->
+      <div class="cv-box">
+        <h3>How AI is Transforming Project Delivery</h3>
+        <p class="muted">Jan 2026</p>
+        <p>Artificial Intelligence is not just a buzzword. In this post, I explore practical ways AI can improve planning, predict risks, and enhance team productivity in project delivery.</p>
+        <a href="#" class="cv-btn">Read More</a>
+      </div>
+
+      <div class="cv-box">
+        <h3>5 Agile Lessons from a Decade in Delivery</h3>
+        <p class="muted">Dec 2025</p>
+        <p>Over 10 years in Agile projects, I’ve seen what works and what doesn’t. Here are 5 lessons that can help teams improve collaboration, delivery, and outcomes.</p>
+        <a href="#" class="cv-btn">Read More</a>
+      </div>
+
+      <!-- Add more blog cards as needed -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="copyright">
+      <p>© 2026 by Anthony Chen.</p>
+      <p class="muted">Powered and secured by GitHub Pages</p>
+    </div>
+
+    <div class="footer-info">
+      <div>
+        <strong>Call</strong>
+        <p>???</p>
+      </div>
+      <div>
+        <strong>Write</strong>
+        <p>???@mysite.com</p>
+      </div>
+      <div>
+        <strong>Follow</strong>
+        <p>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-globe"></i></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark Mode & Scroll Reveal Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('themeToggle');
+      if (!toggle) return;
+
+      // Apply dark mode
+      function applyDarkMode(isDark) {
+        document.body.classList.toggle('dark-mode', isDark);
+      }
+
+      // Load saved theme
+      let savedTheme = localStorage.getItem('theme');
+      if (savedTheme === null) {
+        savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'true' : 'false';
+      }
+      applyDarkMode(savedTheme === 'true');
+
+      // Update icon
+      const icon = toggle.querySelector('i');
+      if (savedTheme === 'true') {
+        icon.classList.add('fa-sun');
+        icon.classList.remove('fa-moon');
+      }
+
+      toggle.addEventListener('click', () => {
+        const isDark = !document.body.classList.contains('dark-mode');
+        applyDarkMode(isDark);
+        localStorage.setItem('theme', isDark);
+
+        if (isDark) {
+          icon.classList.add('fa-sun');
+          icon.classList.remove('fa-moon');
+        } else {
+          icon.classList.add('fa-moon');
+          icon.classList.remove('fa-sun');
+        }
+      });
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
