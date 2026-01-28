@@ -1,10 +1,6 @@
 /* =======================
-   INDEX PAGE SPECIFIC CSS
+   HERO SECTION / INDEX
 ======================= */
-
-/* -----------------------
-   HERO SECTION
------------------------ */
 .hero {
   display: flex;
   gap: 120px;
@@ -14,15 +10,15 @@
 }
 
 .left {
-  position: relative; /* container for bg-box */
+  position: relative;
 }
 
-/* BACKGROUND BOX BEHIND PROFILE */
+/* LIGHT BROWN BOX BEHIND PROFILE */
 .bg-box {
   position: absolute;
   width: 320px;
   height: 420px;
-  background: #e9dfd5;  /* soft brown similar to Wix template */
+  background: #e9dfd5;
   top: -40px;
   left: -80px;
   z-index: 0;
@@ -32,10 +28,10 @@
 .profile-card {
   position: relative;
   width: 320px;
-  background: #f6eee6;  /* profile card color */
+  background: #f6eee6;
   padding: 40px 30px;
   text-align: center;
-  z-index: 1;  /* above bg-box */
+  z-index: 1;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -57,7 +53,6 @@
 .profile-card h2 {
   font-size: 28px;
   font-weight: 700;
-  line-height: 1.1;
 }
 
 .line {
@@ -85,13 +80,10 @@
   font-size: 14px;
 }
 
-/* -----------------------
-   RIGHT HERO CONTENT
------------------------ */
+/* RIGHT SIDE HERO */
 .right h1 {
   font-size: 72px;
   font-weight: 800;
-  line-height: 1.1;
 }
 
 .right h3 {
@@ -108,9 +100,9 @@
   line-height: 1.6;
 }
 
-/* -----------------------
+/* =======================
    RESPONSIVE
------------------------ */
+======================= */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
@@ -143,12 +135,6 @@
 @media (max-width: 480px) {
   .right h1 {
     font-size: 42px;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
   }
 
   .hero {
