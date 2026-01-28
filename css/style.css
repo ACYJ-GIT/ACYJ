@@ -171,6 +171,16 @@ body.dark-mode .navbar {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* BLOG POSTS SPACING */
+.blog-section .cv-box {
+  margin-bottom: 30px; /* adds spacing between cards */
+}
+
+/* Optional: smaller spacing on last card */
+.blog-section .cv-box:last-child {
+  margin-bottom: 0;
+}
+
 /* =======================
    FOOTER
 ======================= */
