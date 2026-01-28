@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV – Anthony Chen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <button class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
 
-<!-- Mobile Nav -->
-<div class="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="blog.html">Blog</a>
-</div>
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="name">Anthony Chen</span>
+      <span class="slash">/</span>
+      <span class="job">CV</span>
+    </div>
 
-<div class="layout">
-
-  <aside class="sidebar">
-    <h1>Anthony Chen</h1>
-    <p>Delivery Manager</p>
-
-    <nav>
-      <a href="#profile">Profile</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
+    <nav class="nav-links">
+      <a href="index.html">ABOUT ME</a>
+      <a class="active" href="cv.html">CV</a>
       <a href="blog.html">Blog</a>
     </nav>
-  </aside>
+  </header>
 
-  <main class="content">
-
-    <section id="profile">
-      <h2>Profile</h2>
-      <p>Delivery Manager with extensive experience delivering complex IT systems across public sector, banking, and enterprise environments. Proven in leading end-to-end delivery using Agile and hybrid methodologies, while balancing delivery outcomes, governance requirements, and team health.</p>
-      <p>Experienced in managing stakeholders, budgets, and vendors, and in operating within regulated environments with strong audit, security, and compliance expectations. Brings a coaching mindset to build high-performing teams, strengthen Agile practices, and establish scalable delivery processes, including SDLC and overseas development models.</p>
+  <!-- CONTENT -->
+  <main class="page fade-in">
+    <section class="page-header">
+      <h1>Curriculum Vitae</h1>
+      <p>Professional experience & background</p>
     </section>
 
-    <section id="experience">
+    <section class="card reveal">
       <h2>Experience</h2>
-      <div class="item">
-        <strong>TBD</strong>
-        <span>2023 – Present</span>
-        <p>TBD.</p>
+
+      <div class="timeline-item">
+        <h3>Project Manager / Scrum Master</h3>
+        <span class="meta">2022 – Present · Ufinity</span>
+        <p>
+          Leading agile delivery teams, managing stakeholders, and defining
+          offshore development processes.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Senior Scrum Master</h3>
+        <span class="meta">2021 – 2022 · Optimum Solutions</span>
+        <p>
+          Squad lead for UOB TMRW mobile app (Engagement module).
+        </p>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="projects">
-        <div class="project">
-          <h3>Project One</h3>
-          <p>Brief description of the project and impact.</p>
-        </div>
-
-        <div class="project">
-          <h3>Project Two</h3>
-          <p>Another project, tools used, and outcome.</p>
-        </div>
-      </div>
+    <section class="card reveal">
+      <h2>Skills</h2>
+      <ul class="pill-list">
+        <li>Agile & Scrum</li>
+        <li>Stakeholder Management</li>
+        <li>Product Thinking</li>
+        <li>ODC Setup</li>
+        <li>Business Analysis</li>
+      </ul>
     </section>
-
   </main>
-</div>
 
+  <script>
+    document.querySelector(".theme-toggle")
+      .addEventListener("click", () =>
+        document.body.classList.toggle("dark")
+      );
+  </script>
 </body>
 </html>
