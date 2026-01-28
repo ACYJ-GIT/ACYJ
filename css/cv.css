@@ -81,7 +81,7 @@
 .timeline {
   border-left: 1.5px solid var(--primary-color);
   margin-left: 20px;
-  padding-left: 20px;
+  padding-left: 35px;
 }
 
 .timeline-item {
@@ -92,7 +92,7 @@
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -5px;    /* slightly closer to line */
+  left: -7px;    /* slightly closer to line */
   top: 10px;     /* center vertically with text */
   width: 6px;    /* smaller bullet */
   height: 6px;
