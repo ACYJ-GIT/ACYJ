@@ -5,79 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anthony Chen</title>
 
-  <!-- Fonts & Icons -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/style.css">
+  <!-- Index CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<header class="navbar">
-  <div class="brand">
-    <span class="dot"></span>
-    <span>Anthony Chen</span>
-  </div>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="name">Anthony Chen</span>
+      <span class="slash">/</span>
+      <span class="job">Job</span>
+    </div>
 
-  <nav class="nav-links">
-    <a class="active" href="index.html">ABOUT</a>
-    <a href="cv.html">CV</a>
-    <a href="blog.html">BLOG</a>
-    <button id="themeToggle" aria-label="Toggle dark mode">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-  </nav>
-</header>
+    <nav class="nav-links">
+      <a class="active" href="index.html">ABOUT ME</a>
+      <a href="cv.html">CV</a>
+      <a href="blog.html">BLOG</a>
+      <button id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </nav>
+  </header>
 
-<main class="hero fade-in">
+  <!-- HERO SECTION -->
+  <main class="hero">
+    <div class="left">
+      <div class="bg-box"></div>
 
-  <!-- LEFT COLUMN -->
-  <section class="hero-left reveal">
-    <div class="bg-box"></div>
+      <div class="profile-card fade-in">
+        <img src="profile.jpg" alt="Profile photo">
 
-    <div class="profile-card hover-card">
-      <img src="profile.jpg" alt="Anthony Chen">
+        <h2>Anthony<br>Chen</h2>
+        <span class="line"></span>
+        <p class="role">Role</p>
 
-      <h2>Anthony<br>Chen</h2>
-      <span class="divider"></span>
-      <p class="role">Product / Tech</p>
-      <br/> <br/>
-
-      <div class="social-bar">
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-globe"></i></a>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- RIGHT COLUMN -->
-  <section class="hero-right reveal">
-    <h1>Hello!</h1>
-    <h3>Here’s who I am & what I do</h3>
+    <div class="right fade-in">
+      <h1>Hello!</h1>
+      <h3>Here's who I am & what I do</h3>
 
-    <div class="actions">
-      <a class="btn primary" href="cv.html">RESUME</a>
-      <a class="btn outline" href="project.html">PROJECTS</a>
+      <div class="actions">
+        <a class="btn primary" href="cv.html">RESUME</a>
+        <a class="btn outline" href="project.html">PROJECTS</a>
+      </div>
+
+      <p>Hi! I’m Anthony. This site hosts my resume, portfolio of projects, and my writing.</p>
     </div>
-    <br/>
+  </main>
 
-    <p>
-      I’m Anthony — a product-minded technologist passionate about building useful,
-      well-designed systems.
-    </p>
-  </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="copyright">
+      <p>© 2026 by Anthony Chen.</p>
+      <p class="muted">Powered and secured by GitHub Pages</p>
+    </div>
 
-</main>
+    <div class="footer-info">
+      <div>
+        <strong>Call</strong>
+        <p>???</p>
+      </div>
+      <div>
+        <strong>Write</strong>
+        <p>???@mysite.com</p>
+      </div>
+      <div>
+        <strong>Follow</strong>
+        <p>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fas fa-globe"></i>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-<footer class="footer">
-  <div class="footer-content">
-    <p>© 2026 Anthony Chen</p>
-    <p class="muted">Powered and secured by GitHub Pages</p>
-  </div>
-</footer>
+  <!-- Dark Mode Script -->
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 
-<script src="js/main.js"></script>
 </body>
 </html>
