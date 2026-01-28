@@ -10,6 +10,38 @@
   padding: 60px;
 }
 
+/* PROFILE IMAGE + NAME HEADER */
+.cv-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.cv-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cv-name {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.cv-title {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Download CV Button in header */
+.cv-header .cv-btn {
+  width: fit-content;
+  margin-top: 10px;
+}
+
 /* SUMMARY */
 .cv-summary {
   background: var(--bg-card);
@@ -99,10 +131,28 @@
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
+/* PROFILE IMAGE SHARED */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .cv-main {
     padding: 40px 25px;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cv-header .cv-btn {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -110,11 +160,4 @@
   .cv-main {
     padding: 20px 15px;
   }
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
 }
