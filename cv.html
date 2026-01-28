@@ -1,35 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anthony Chen - CV</title>
-
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-
-<header class="navbar">
-  <div class="brand">
-    <span class="dot"></span>
-    <span>Anthony Chen</span>
-  </div>
-
-  <nav class="nav-links">
-    <a href="index.html">ABOUT</a>
-    <a class="active" href="cv.html">CV</a>
-    <a href="blog.html">BLOG</a>
-    <button id="themeToggle" aria-label="Toggle dark mode">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-  </nav>
-</header>
-
 <main class="hero fade-in">
 
   <!-- LEFT -->
@@ -48,6 +16,10 @@
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-github"></i></a>
       </div>
+
+      <a href="Anthony-Chen-CV.pdf" class="btn primary" download>
+        <i class="fa-solid fa-download"></i> Download CV
+      </a>
     </div>
   </section>
 
@@ -55,6 +27,16 @@
   <section class="hero-right reveal">
 
     <h1>Curriculum Vitae</h1>
+
+    <!-- SUMMARY -->
+    <div class="cv-block">
+      <h3 class="section-title">Summary</h3>
+      <div class="cv-box">
+        <p>
+          Delivery Manager with 18 years of experience in Information Technology, leading complex programs across banking, government, and enterprise sectors. Over the past 9 years, specialized in Agile delivery and program management, driving digital transformation, stakeholder alignment, and end-to-end execution of mission-critical systems. Recognized for building high-performing teams, optimizing delivery processes, and ensuring projects are delivered on time, within budget, and to compliance standards. Certified Scrum Professional (CSP-SM) with a proven track record of elevating organizational delivery maturity.
+        </p>
+      </div>
+    </div>
 
     <!-- EXPERIENCE -->
     <div class="cv-block">
@@ -79,40 +61,40 @@
       </div>
     </div>
 
-    <!-- EDUCATION -->
+    <!-- EDUCATION TIMELINE -->
     <div class="cv-block">
       <h3 class="section-title">Education</h3>
 
-      <div class="cv-box">
-        <h4>Bachelor’s in Computer Science</h4>
-        <span class="cv-date">University Name · Year</span>
-        <p>Relevant coursework or honors if applicable.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date">2010 – 2014</span>
+          <div class="timeline-content">
+            <h4>Bachelor’s in Computer Science</h4>
+            <p>University Name</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">2007 – 2010</span>
+          <div class="timeline-content">
+            <h4>High School Diploma</h4>
+            <p>School Name</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- SKILLS -->
+    <!-- SKILLS WITH ICON BADGES -->
     <div class="cv-block">
       <h3 class="section-title">Skills</h3>
       <ul class="skills-list">
-        <li>Scrum & Agile</li>
-        <li>Project Management</li>
-        <li>Product Design</li>
-        <li>Stakeholder Management</li>
-        <li>Analytical Thinking</li>
+        <li><i class="fa-solid fa-check"></i> Scrum & Agile</li>
+        <li><i class="fa-solid fa-project-diagram"></i> Project Management</li>
+        <li><i class="fa-solid fa-lightbulb"></i> Product Design</li>
+        <li><i class="fa-solid fa-users"></i> Stakeholder Management</li>
+        <li><i class="fa-solid fa-brain"></i> Analytical Thinking</li>
       </ul>
     </div>
 
   </section>
 
 </main>
-
-<footer class="footer">
-  <div class="footer-content">
-    <p>© 2026 Anthony Chen</p>
-    <p class="muted">Powered and secured by GitHub Pages</p>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
