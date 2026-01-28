@@ -1,30 +1,49 @@
 /* =======================
-   HERO SECTION
+   INDEX PAGE SPECIFIC CSS
 ======================= */
+
+/* -----------------------
+   HERO SECTION
+----------------------- */
 .hero {
   display: flex;
+  gap: 120px;
   align-items: center;
   padding: 80px 60px;
-  gap: 120px;
-}
-
-.left {
   position: relative;
 }
 
+.left {
+  position: relative; /* container for bg-box */
+}
+
+/* BACKGROUND BOX BEHIND PROFILE */
 .bg-box {
   position: absolute;
   width: 320px;
   height: 420px;
-  background: #e9dfd5;
+  background: #e9dfd5;  /* soft brown similar to Wix template */
   top: -40px;
   left: -80px;
+  z-index: 0;
+  border-radius: 20px;
 }
 
 .profile-card {
   position: relative;
   width: 320px;
+  background: #f6eee6;  /* profile card color */
+  padding: 40px 30px;
   text-align: center;
+  z-index: 1;  /* above bg-box */
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .profile-card img {
@@ -45,7 +64,7 @@
   display: block;
   width: 40px;
   height: 2px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   margin: 15px auto;
 }
 
@@ -55,16 +74,24 @@
   margin-bottom: 30px;
 }
 
-.socials span {
-  margin: 0 8px;
-  font-size: 14px;
-  cursor: pointer;
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
-/* RIGHT COLUMN */
+.socials span {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* -----------------------
+   RIGHT HERO CONTENT
+----------------------- */
 .right h1 {
   font-size: 72px;
   font-weight: 800;
+  line-height: 1.1;
 }
 
 .right h3 {
@@ -79,20 +106,33 @@
 .right p {
   max-width: 520px;
   line-height: 1.6;
-  margin-bottom: 15px;
 }
 
-/* HERO RESPONSIVE */
-@media (max-width: 768px) {
+/* -----------------------
+   RESPONSIVE
+----------------------- */
+@media (max-width: 1024px) {
   .hero {
     flex-direction: column;
-    padding: 40px 25px;
     gap: 60px;
+    padding: 60px 40px;
   }
 
   .bg-box {
     left: 50%;
     transform: translateX(-50%);
+    top: -30px;
+  }
+
+  .profile-card {
+    width: 280px;
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 25px;
   }
 
   .right h1 {
@@ -103,5 +143,15 @@
 @media (max-width: 480px) {
   .right h1 {
     font-size: 42px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    gap: 40px;
   }
 }
