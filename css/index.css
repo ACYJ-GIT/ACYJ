@@ -69,41 +69,6 @@
   margin-bottom: 10px;
 }
 
-/* Role bullets inside profile card */
-.bullet {
-  display: flex;
-  flex-direction: column; /* stack vertically */
-  gap: 8px;
-  margin-bottom: 30px;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-.bullet-item {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* space between dot and text */
-}
-
-.bullet-item .dot {
-  width: 10px;
-  height: 10px;
-  background: var(--primary-color); /* ensure matches brand */
-  border-radius: 50%;
-  flex-shrink: 0; /* prevent dot from shrinking in flex */
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.socials span {
-  cursor: pointer;
-  font-size: 14px;
-}
-
 /* RIGHT SIDE HERO */
 .right h1 {
   font-size: 72px;
