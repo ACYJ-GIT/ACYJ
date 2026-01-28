@@ -5,10 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anthony Chen</title>
 
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <!-- DARK MODE TOGGLE -->
+  <button class="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fa-solid fa-moon"></i>
+  </button>
 
   <!-- NAVBAR -->
   <header class="navbar">
@@ -16,7 +30,7 @@
       <span class="dot"></span>
       <span class="name">Anthony Chen</span>
       <span class="slash">/</span>
-      <span class="job">Agile . Product . Resume . Projects . Blog</span>
+      <span class="job">Job</span>
     </div>
 
     <nav class="nav-links">
@@ -26,42 +40,45 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <main class="hero">
-    <div class="left">
+  <!-- HERO -->
+  <main class="hero fade-in">
+    <div class="left reveal">
       <div class="bg-box"></div>
 
       <div class="profile-card">
-        <img src="profile.jpg" alt="Profile photo">
+        <img src="profile.jpg" alt="Profile photo" />
 
-        <h2>Anthony<br>Chen</h2>
+        <h2>Anthony<br />Chen</h2>
         <span class="line"></span>
-        <p class="role">Role</p>
+        <p class="role">Project Manager / Scrum Master</p>
 
         <div class="socials">
-          <span>f</span>
-          <span>t</span>
-          <span>in</span>
-          <span>◎</span>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </div>
 
-    <div class="right">
+    <div class="right reveal">
       <h1>Hello!</h1>
-      <h3>Here's who I am & what I do</h3>
+      <h3>Here’s who I am & what I do</h3>
 
       <div class="actions">
         <a class="btn primary" href="cv.html">RESUME</a>
         <a class="btn outline" href="project.html">PROJECTS</a>
       </div>
 
-      <p>Hi! I’m Anthony. This site hosts my resume, portfolio of projects, and my writing.</p>
+      <p>
+        Hi! I’m Anthony. This site hosts my resume, portfolio of projects,
+        and my writing.
+      </p>
     </div>
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer reveal">
     <div class="copyright">
       <p>© 2026 by Anthony Chen.</p>
       <p class="muted">Powered and secured by GitHub Pages</p>
@@ -78,10 +95,17 @@
       </div>
       <div>
         <strong>Follow</strong>
-        <p>f t in ◎</p>
+        <p>Facebook · X · LinkedIn · Instagram</p>
       </div>
     </div>
   </footer>
 
+  <!-- DARK MODE SCRIPT -->
+  <script>
+    const toggle = document.querySelector(".theme-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
 </body>
 </html>
