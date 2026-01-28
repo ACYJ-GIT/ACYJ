@@ -7,6 +7,7 @@
   --bg-card: #f6eee6;
   --font-base: 14px;
   --radius-card: 30px;
+  --max-content-width: 1200px; /* for consistent page alignment */
 }
 
 /* =======================
@@ -25,6 +26,16 @@ body {
   line-height: 1.6;
   font-size: var(--font-base);
   transition: background 0.3s, color 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-content-width); /* ensures all pages align */
+}
+
+/* =======================
+   FORCE VERTICAL SCROLLBAR
+======================= */
+html {
+  overflow-y: scroll; /* always show scrollbar to prevent layout shift */
 }
 
 /* =======================
