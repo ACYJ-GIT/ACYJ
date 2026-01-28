@@ -70,18 +70,11 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* EDUCATION TIMELINE 
-.timeline {
-  position: relative;
-  margin-left: 20px;
-  padding-left: 20px;
-  border-left: 2px solid var(--primary-color);
-}*/
-
+/* EDUCATION TIMELINE */
 .timeline {
   border-left: 1.5px solid var(--primary-color);
   margin-left: 20px;
-  padding-left: 35px;
+  padding-left: 40px; /* increased spacing between bullet and text */
 }
 
 .timeline-item {
@@ -92,9 +85,9 @@
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -7px;    /* slightly closer to line */
-  top: 10px;     /* center vertically with text */
-  width: 6px;    /* smaller bullet */
+  left: -8px;      /* aligns bullet over timeline line */
+  top: 8px;        /* centers bullet vertically with year/text */
+  width: 6px;      /* smaller bullet */
   height: 6px;
   background: var(--primary-color);
   border-radius: 50%;
