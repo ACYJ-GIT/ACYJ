@@ -13,6 +13,7 @@ body {
   color: #000;
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
+  font-size: 14px; /* match index base font */
 }
 
 /* =======================
@@ -33,7 +34,7 @@ body.dark-mode .cv-box {
 }
 
 /* =======================
-   NAVBAR
+   NAVBAR (match index.html)
 ======================= */
 .navbar {
   display: flex;
@@ -48,6 +49,7 @@ body.dark-mode .cv-box {
 .brand {
   display: flex;
   align-items: center;
+  font-size: 14px; /* match index */
   font-weight: 600;
   gap: 10px;
 }
@@ -60,9 +62,10 @@ body.dark-mode .cv-box {
 }
 
 .nav-links a {
-  margin-left: 25px;
+  margin-left: 30px; /* match index */
   text-decoration: none;
   color: inherit;
+  font-size: 13px; /* match index */
   font-weight: 500;
 }
 
@@ -112,14 +115,15 @@ body.dark-mode .cv-box {
 }
 
 .profile-info .role {
-  font-size: 14px;
+  font-size: 12px; /* match index .role */
+  letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
 .cv-summary {
-  background: #f6eee6;
+  background: #f6eee6; /* same as index .profile-card */
   padding: 20px 25px;
-  border-radius: 12px;
+  border-radius: 30px; /* match index card roundness */
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -149,9 +153,9 @@ body.dark-mode .cv-box {
 
 /* EXPERIENCE / EDUCATION BOXES */
 .cv-box {
-  background: #f6eee6;
+  background: #f6eee6; /* match profile card */
   padding: 20px 25px;
-  border-radius: 12px;
+  border-radius: 30px; /* match index card */
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -204,9 +208,9 @@ body.dark-mode .cv-box {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f6eee6;
+  background: #f6eee6; /* same as index hover-card background */
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: 30px; /* match index */
   font-size: 14px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -218,19 +222,26 @@ body.dark-mode .cv-box {
 }
 
 /* =======================
-   FOOTER
+   FOOTER (match index)
 ======================= */
 .footer {
-  padding: 30px 25px;
-  text-align: center;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 13px;
   border-top: 1px solid #ddd;
+}
+
+.footer-info {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
 }
 
 .footer .muted {
   color: #777;
   font-size: 12px;
-  margin-top: 5px;
 }
 
 /* =======================
@@ -284,6 +295,14 @@ body.dark-mode .cv-box {
 
   .skills-list {
     justify-content: center;
+  }
+
+  .navbar {
+    padding: 25px;
+  }
+
+  .nav-links a {
+    margin-left: 15px;
   }
 }
 
