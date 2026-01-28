@@ -7,7 +7,7 @@
   --bg-card: #f6eee6;
   --font-base: 14px;
   --radius-card: 30px;
-  --max-content-width: 1200px; /* for consistent page alignment */
+  --max-content-width: 1200px;
 }
 
 /* =======================
@@ -28,14 +28,12 @@ body {
   transition: background 0.3s, color 0.3s;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--max-content-width); /* ensures all pages align */
+  max-width: var(--max-content-width);
+  padding-top: 90px; /* space for sticky navbar */
 }
 
-/* =======================
-   FORCE VERTICAL SCROLLBAR
-======================= */
 html {
-  overflow-y: scroll; /* always show scrollbar to prevent layout shift */
+  overflow-y: scroll; /* ensures scrollbar always present */
 }
 
 /* =======================
@@ -58,16 +56,26 @@ body.dark-mode .skills-list li {
 }
 
 /* =======================
-   NAVBAR
+   STICKY HEADER
 ======================= */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 25px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 60px;
-  background: transparent;
   flex-wrap: wrap;
   gap: 10px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .navbar {
+  background: #1a1a1a;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.05);
 }
 
 .brand {
@@ -95,15 +103,6 @@ body.dark-mode .skills-list li {
 
 .nav-links a.active {
   color: var(--primary-color);
-}
-
-.nav-links button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 18px;
-  margin-left: 15px;
-  color: inherit;
 }
 
 /* =======================
@@ -135,7 +134,7 @@ body.dark-mode .skills-list li {
 }
 
 /* =======================
-   HOVER CARDS (CV/PROFILE/SKILLS)
+   CARDS & HOVER EFFECTS
 ======================= */
 .hover-card,
 .cv-box,
@@ -197,10 +196,7 @@ body.dark-mode .skills-list li {
 }
 
 @keyframes revealUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* =======================
@@ -208,7 +204,7 @@ body.dark-mode .skills-list li {
 ======================= */
 @media (max-width: 768px) {
   .navbar {
-    padding: 25px;
+    padding: 20px 40px;
   }
 
   .nav-links a {
