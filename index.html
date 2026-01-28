@@ -85,11 +85,63 @@
     </div>
   </footer>
 
-  <!-- Dark Mode Script -->
+  <!-- Dark Mode & Scroll Reveal Script -->
   <script>
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('themeToggle');
+      if (!toggle) return;
+
+      // Function to apply dark mode
+      function applyDarkMode(isDark) {
+        document.body.classList.toggle('dark-mode', isDark);
+      }
+
+      // Load saved theme from localStorage
+      let savedTheme = localStorage.getItem('theme');
+      if (savedTheme === null) {
+        // First visit: respect system preference
+        savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'true' : 'false';
+      }
+      applyDarkMode(savedTheme === 'true');
+
+      // Update toggle UI (icon color)
+      if (savedTheme === 'true') {
+        toggle.querySelector('i').classList.add('fa-sun');
+        toggle.querySelector('i').classList.remove('fa-moon');
+      }
+
+      // Toggle click handler
+      toggle.addEventListener('click', () => {
+        const isDark = !document.body.classList.contains('dark-mode');
+        applyDarkMode(isDark);
+        localStorage.setItem('theme', isDark);
+
+        // Swap icon
+        const icon = toggle.querySelector('i');
+        if (isDark) {
+          icon.classList.add('fa-sun');
+          icon.classList.remove('fa-moon');
+        } else {
+          icon.classList.add('fa-moon');
+          icon.classList.remove('fa-sun');
+        }
+      });
+
+      // =======================
+      // Scroll reveal
+      // =======================
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      reveals.forEach(el => observer.observe(el));
     });
   </script>
 
