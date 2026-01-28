@@ -111,3 +111,10 @@
     padding: 20px 15px;
   }
 }
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
