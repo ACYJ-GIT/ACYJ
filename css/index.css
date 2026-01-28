@@ -1,0 +1,107 @@
+/* =======================
+   HERO SECTION
+======================= */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+  gap: 120px;
+}
+
+.left {
+  position: relative;
+}
+
+.bg-box {
+  position: absolute;
+  width: 320px;
+  height: 420px;
+  background: #e9dfd5;
+  top: -40px;
+  left: -80px;
+}
+
+.profile-card {
+  position: relative;
+  width: 320px;
+  text-align: center;
+}
+
+.profile-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--secondary-color);
+  margin: 15px auto;
+}
+
+.profile-card .role {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.socials span {
+  margin: 0 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* RIGHT COLUMN */
+.right h1 {
+  font-size: 72px;
+  font-weight: 800;
+}
+
+.right h3 {
+  font-weight: 400;
+  margin: 20px 0 30px;
+}
+
+.actions {
+  margin-bottom: 30px;
+}
+
+.right p {
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* HERO RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 25px;
+    gap: 60px;
+  }
+
+  .bg-box {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .right h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .right h1 {
+    font-size: 42px;
+  }
+}
