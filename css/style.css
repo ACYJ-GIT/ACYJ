@@ -229,11 +229,15 @@ body.dark-mode .navbar {
  /* Success/Error message styles */
  #form-success,
  #form-error {
-   display: none;
-   font-size: 1rem;
-   margin-top: 2rem;
-   opacity: 0;
-   transition: opacity 0.4s ease;
+  display: none;
+  font-family: 'Inter', sans-serif;  /* match site font */
+  font-size: 0.95rem;               /* match input/paragraph size */
+  font-weight: 400;                  /* normal weight like body text */
+  color: #333;                       /* match paragraph color */
+  line-height: 1.6;                  /* same as body text */
+  margin-top: 2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
  }
 
  #form-success.show,
