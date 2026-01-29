@@ -25,104 +25,7 @@
 
   <!-- Site CSS -->
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/index.css">
-
-  <style>
-    /* Contact wrapper */
-    .contact-wrapper {
-      max-width: 680px;
-      margin: 1rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .contact-wrapper h1 {
-      margin-bottom: 0.25rem;
-    }
-
-    .contact-wrapper p {
-      margin-bottom: 1.5rem;
-      opacity: 0.85;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    /* === Label & Input Styling matching index.html === */
-    label {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 0.4rem;
-    }
-
-    input,
-    textarea {
-      font-family: inherit;
-      font-size: 0.95rem;
-      padding: 0.6rem 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 0.35rem;
-      outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: #d18b46;
-      box-shadow: 0 0 0 2px rgba(209, 139, 70, 0.2);
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    /* Honeypot hidden field */
-    .hp {
-      position: absolute;
-      left: -9999px;
-    }
-
-    /* Success/Error message styles */
-    #form-success,
-    #form-error {
-      display: none;
-      font-size: 1rem;
-      text-align: left;
-      margin-top: 2rem;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    #form-success.show,
-    #form-error.show {
-      display: block;
-      opacity: 1;
-    }
-
-    /* Submit Button same as CV page */
-    #send-btn {
-      background-color: #d18b46;
-      color: #fff;
-      padding: 0.65rem 1.6rem;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 0.35rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      align-self: flex-start;
-    }
-
-    #send-btn:hover {
-      background-color: #b06d2e;
-    }
-  </style>
+  <!--link rel="stylesheet" href="./css/index.css"-->
 </head>
 
 <body>
@@ -145,8 +48,7 @@
     </nav>
   </header>
 
-  
-  <!-- HERO / PAGE HEADER -->
+  <!-- HERO / CONTACT SECTION -->
   <main class="hero">
     <div class="left">
       <div class="bg-box"></div>
@@ -164,49 +66,47 @@
       <h1>Let’s talk!</h1>
       <p>Share your message below, and I’ll respond as soon as I can.</p>
 
-    </div>
-  </main>
-  <!-- MAIN CONTENT -->
-  <main class="contact-wrapper">    
-    <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
-      <!-- Static Forms access key -->
-      <input type="hidden" name="accessKey" value="sf_ank1a4kdeei3n2dd98fblik1" />
+      <!-- Contact Form placed directly after paragraph -->
+      <form id="contact-form" class="contact-form" action="https://api.staticforms.xyz/submit" method="post">
+        <!-- Static Forms access key -->
+        <input type="hidden" name="accessKey" value="sf_ank1a4kdeei3n2dd98fblik1" />
 
-      <!-- Sender email -->
-      <label>Your email
-        <input type="email" name="email" placeholder="you@example.com" required/>
-      </label>
-
-      <!-- Subject -->
-      <label>Subject 
-       <input type="text" name="subject" placeholder="What’s this about?" required/>
-      </label>
-
-      <!-- Message -->
-      <label>Message
-        <textarea name="message" placeholder="Your message. Kindly include your contact for me to get back to you." required></textarea>
-      </label>
-      
-      <!-- Honeypot -->
-      <div class="hp">
-        <label>Company 
-          <input type="text" name="company" autocomplete="off" tabindex="-1" />
+        <!-- Sender email -->
+        <label>Your email
+          <input type="email" name="email" placeholder="you@example.com" required/>
         </label>
-      </div>
 
-      <!-- Submit Button -->
-      <button type="submit" id="send-btn">Send message</button>
-    </form>
+        <!-- Subject -->
+        <label>Subject 
+          <input type="text" name="subject" placeholder="What’s this about?" required/>
+        </label>
 
-    <!-- SUCCESS MESSAGE -->
-    <div id="form-success">
-      <h2>Thank you</h2>
-      <p>Your message has been sent successfully. I’ll get back to you as soon as I can.</p>
-    </div>
+        <!-- Message -->
+        <label>Message
+          <textarea name="message" placeholder="Your message. Kindly include your contact for me to get back to you." required></textarea>
+        </label>
 
-    <!-- ERROR MESSAGE -->
-    <div id="form-error">
-      <p>Something went wrong. Please try again later.</p>
+        <!-- Honeypot -->
+        <div class="hp">
+          <label>Company 
+            <input type="text" name="company" autocomplete="off" tabindex="-1" />
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="send-btn">Send message</button>
+
+        <!-- SUCCESS MESSAGE -->
+        <div id="form-success">
+          <h2>Thank you</h2>
+          <p>Your message has been sent successfully. I’ll get back to you as soon as I can.</p>
+        </div>
+
+        <!-- ERROR MESSAGE -->
+        <div id="form-error">
+          <p>Something went wrong. Please try again later.</p>
+        </div>
+      </form>
     </div>
   </main>
 
