@@ -119,10 +119,7 @@
       Drop me a message below.
     </p>
 
-    <form
-      action="https://api.staticforms.xyz/submit"
-      method="post"
-    >
+    <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
       <!-- Static Forms access key -->
       <input type="hidden" name="accessKey" value="sf_ank1a4kdeei3n2dd98fblik1" />
 
@@ -168,27 +165,35 @@
         />
       </label>
 
-      <!-- Honeypot field -->
+      
+      <!-- Honeypot -->
       <div class="hp">
         <label>
           Company
-          <input
-            type="text"
-            name="company"
-            autocomplete="off"
-            tabindex="-1"
-          />
+          <input type="text" name="company" autocomplete="off" tabindex="-1" />
         </label>
       </div>
+    
+      <button type="submit" class="btn" id="send-btn">
+        Send message
+      </button>
+    </form>
+    
+    <!-- Success message (hidden by default) -->
+    <div id="form-success" style="display:none; margin-top:3rem;">
+      <h2>Thank you</h2>
+      <p>
+        Your message has been sent successfully.
+        I’ll get back to you as soon as I can.
+      </p>
+    </div>
+    
+    <!-- Error message -->
+    <div id="form-error" style="display:none; margin-top:2rem;">
+      <p>Something went wrong. Please try again later.</p>
+    </div>
 
-      <!-- Redirect after success -->
-      <input
-        type="hidden"
-        name="redirectTo"
-        value="https://acyj-git.github.io/ACYJ/thank-you.html"
-      />
-
-      <button type="submit">Send message</button>
+      <button type="submit" class="cv-btn">Send message</button>
     </form>
   </main>
 
@@ -273,6 +278,43 @@
       reveals.forEach(el => observer.observe(el));
     });
   </script>
+
+  <script>
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+  const error = document.getElementById('form-error');
+  const button = document.getElementById('send-btn');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    button.disabled = true;
+    button.textContent = 'Sending…';
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      error.style.display = 'block';
+      button.disabled = false;
+      button.textContent = 'Send message';
+    }
+  });
+</script>
 
 </body>
 </html>
