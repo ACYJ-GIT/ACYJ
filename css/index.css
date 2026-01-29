@@ -89,23 +89,6 @@
   line-height: 1.6;
 }
 
-/* button */
-.btn {
-  background-color: #d18b46; /* orange/brown */
-  color: #fff;
-  padding: 0.65rem 1.6rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 0.35rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #b06d2e; /* slightly darker on hover */
-}
-
 /* =======================
    RESPONSIVE
 ======================= */
