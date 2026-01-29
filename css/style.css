@@ -181,6 +181,85 @@ body.dark-mode .navbar {
   margin-bottom: 0;
 }
 
+/* CONTACT FORM */
+.contact-form {
+      margin-top: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+ }
+
+ label {
+   font-size: 0.85rem;
+   font-weight: 500;
+   color: #333;
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 0.4rem;
+ }
+
+ input,
+ textarea {
+   font-family: inherit;
+   font-size: 0.95rem;
+   padding: 0.6rem 0.75rem;
+   border: 1px solid #ccc;
+   border-radius: 0.35rem;
+   outline: none;
+   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+ }
+
+ input:focus,
+ textarea:focus {
+   border-color: #d18b46;
+   box-shadow: 0 0 0 2px rgba(209, 139, 70, 0.2);
+ }
+
+ textarea {
+   min-height: 140px;
+   resize: vertical;
+ }
+
+ /* Honeypot hidden field */
+ .hp {
+   position: absolute;
+   left: -9999px;
+ }
+
+ /* Success/Error message styles */
+ #form-success,
+ #form-error {
+   display: none;
+   font-size: 1rem;
+   margin-top: 2rem;
+   opacity: 0;
+   transition: opacity 0.4s ease;
+ }
+
+ #form-success.show,
+ #form-error.show {
+   display: block;
+   opacity: 1;
+ }
+
+ /* Submit Button same as CV page */
+ #send-btn {
+   background-color: #d18b46;
+   color: #fff;
+   padding: 0.65rem 1.6rem;
+   font-size: 0.95rem;
+   font-weight: 600;
+   border: none;
+   border-radius: 0.35rem;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   align-self: flex-start;
+ }
+
+ #send-btn:hover {
+   background-color: #b06d2e;
+ }
+
 /* =======================
    FOOTER
 ======================= */
