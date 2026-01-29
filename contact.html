@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anthony Chen | Contact</title>
 
-  <!-- SEO -->
+  <!-- SEO & OpenGraph -->
   <meta name="description" content="Anthony Chen's blog: insights on AI, Agile, Product Management, and project delivery.">
   <meta name="keywords" content="Anthony Chen, blog, AI, Agile, Product, Project Management">
   <meta name="author" content="Anthony Chen | Contact Me">
-
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Anthony Chen | Blog">
+  <meta property="og:title" content="Anthony Chen | Contact">
   <meta property="og:description" content="Insights on AI, Agile, Product Management, and project delivery.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://acyj-git.github.io/ACYJ/contact.html">
@@ -21,10 +19,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <!-- Site CSS -->
@@ -32,7 +28,7 @@
   <link rel="stylesheet" href="./css/index.css">
 
   <style>
-    /* Contact form wrapper */
+    /* Contact wrapper */
     .contact-wrapper {
       max-width: 680px;
       margin: 6rem auto;
@@ -75,20 +71,31 @@
       resize: vertical;
     }
 
-    /* Honeypot: hidden field */
+    /* Honeypot hidden field */
     .hp {
       position: absolute;
       left: -9999px;
     }
 
-    /* Success/Error messages */
+    /* Success/Error message styles */
     #form-success,
     #form-error {
-      text-align: left;
+      display: none;
       font-size: 1rem;
+      text-align: left;
+      margin-top: 2rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    #form-success.show,
+    #form-error.show {
+      display: block;
+      opacity: 1;
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -112,10 +119,7 @@
   <!-- MAIN CONTENT -->
   <main class="contact-wrapper">
     <h1>Get in touch</h1>
-    <p>
-      Have a question, opportunity, or just want to say hi?
-      Drop me a message below.
-    </p>
+    <p>Have a question, opportunity, or just want to say hi? Drop me a message below.</p>
 
     <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
       <!-- Static Forms access key -->
@@ -137,6 +141,7 @@
       <label>
         Message
         <textarea name="message" placeholder="Your message. Kindly include your contact for me to get back to you." required></textarea>
+      </label>
       
       <!-- Honeypot -->
       <div class="hp">
@@ -150,14 +155,14 @@
       <button type="submit" class="cv-btn" id="send-btn">Send message</button>
     </form>
 
-    <!-- Success message -->
-    <div id="form-success" style="display:none; margin-top:3rem;">
+    <!-- SUCCESS MESSAGE -->
+    <div id="form-success">
       <h2>Thank you</h2>
       <p>Your message has been sent successfully. I’ll get back to you as soon as I can.</p>
     </div>
 
-    <!-- Error message -->
-    <div id="form-error" style="display:none; margin-top:2rem;">
+    <!-- ERROR MESSAGE -->
+    <div id="form-error">
       <p>Something went wrong. Please try again later.</p>
     </div>
   </main>
@@ -222,11 +227,7 @@
 
       const reveals = document.querySelectorAll('.reveal');
       const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
-          });
-        },
+        entries => { entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); }); },
         { threshold: 0.2 }
       );
       reveals.forEach(el => observer.observe(el));
@@ -257,12 +258,13 @@
 
         if (response.ok) {
           form.style.display = 'none';
-          success.style.display = 'block';
+          success.classList.add('show');
+          success.scrollIntoView({ behavior: 'smooth' });
         } else {
           throw new Error('Submission failed');
         }
       } catch (err) {
-        error.style.display = 'block';
+        error.classList.add('show');
         button.disabled = false;
         button.textContent = 'Send message';
       }
