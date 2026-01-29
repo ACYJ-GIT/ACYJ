@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anthony Chen</title>
+  <title>Anthony Chen | Contact</title>
 
   <!-- SEO -->
   <meta name="description" content="Anthony Chen's blog: insights on AI, Agile, Product Management, and project delivery.">
@@ -14,7 +14,7 @@
   <meta property="og:title" content="Anthony Chen | Blog">
   <meta property="og:description" content="Insights on AI, Agile, Product Management, and project delivery.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://acyj-git.github.io/ACYJ/blog.html">
+  <meta property="og:url" content="https://acyj-git.github.io/ACYJ/contact.html">
   <meta property="og:image" content="./img/Profile.png">
 
   <!-- Favicon -->
@@ -27,12 +27,12 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-  <!-- Index CSS -->
+  <!-- Site CSS -->
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/index.css">
 
   <style>
-    /* Form-specific tweaks to match your site look */
+    /* Contact form wrapper */
     .contact-wrapper {
       max-width: 680px;
       margin: 6rem auto;
@@ -75,18 +75,17 @@
       resize: vertical;
     }
 
-    button {
-      align-self: flex-start;
-      margin-top: 1rem;
-      padding: 0.6rem 1.4rem;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-
-    /* Honeypot: invisible but accessible-safe */
+    /* Honeypot: hidden field */
     .hp {
       position: absolute;
       left: -9999px;
+    }
+
+    /* Success/Error messages */
+    #form-success,
+    #form-error {
+      text-align: left;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -110,8 +109,7 @@
     </nav>
   </header>
 
-<body>
-
+  <!-- MAIN CONTENT -->
   <main class="contact-wrapper">
     <h1>Get in touch</h1>
     <p>
@@ -124,44 +122,51 @@
       <input type="hidden" name="accessKey" value="sf_ank1a4kdeei3n2dd98fblik1" />
 
       <!-- Sender email -->
-      <label>Your email
+      <label>
+        Your email
         <input type="email" name="email" placeholder="you@example.com" required/>
       </label>
 
       <!-- Subject -->
-      <label>Subject 
+      <label>
+        Subject 
         <input type="text" name="subject" placeholder="What’s this about?" required/>
       </label>
 
       <!-- Message -->
-      <label>Message
+      <label>
+        Message
         <textarea name="message" placeholder="Your message. Kindly include your contact for me to get back to you." required></textarea>
       </label>
-      
+
+      <!-- Optional Contact -->
+      <label>
+        Contact (optional)
+        <input type="text" name="contact" placeholder="Phone, LinkedIn, etc." />
+      </label>
+
       <!-- Honeypot -->
       <div class="hp">
-        <label>Company 
+        <label>
+          Company 
           <input type="text" name="company" autocomplete="off" tabindex="-1" />
         </label>
       </div>
-    
-      <button type="submit" class="cv-btn">Send message</button>
-      
-      <!-- Success message (hidden by default) -->
-      <div id="form-success" style="display:none; margin-top:3rem;">
-        <h2>Thank you</h2>
-        <p>
-          Your message has been sent successfully.
-          I’ll get back to you as soon as I can.
-        </p>
-      </div>
-      
-      <!-- Error message -->
-      <div id="form-error" style="display:none; margin-top:2rem;">
-        <p>Something went wrong. Please try again later.</p>
-      </div>
-        
+
+      <!-- Submit Button -->
+      <button type="submit" class="cv-btn" id="send-btn">Send message</button>
     </form>
+
+    <!-- Success message -->
+    <div id="form-success" style="display:none; margin-top:3rem;">
+      <h2>Thank you</h2>
+      <p>Your message has been sent successfully. I’ll get back to you as soon as I can.</p>
+    </div>
+
+    <!-- Error message -->
+    <div id="form-error" style="display:none; margin-top:2rem;">
+      <p>Something went wrong. Please try again later.</p>
+    </div>
   </main>
 
   <!-- FOOTER -->
@@ -170,7 +175,7 @@
       <p>© 2026 by Anthony Chen.</p>
       <p class="muted">Powered and secured by GitHub Pages</p>
     </div>
- 
+
     <div class="footer-info">
       <div>
         <strong>Write</strong>
@@ -180,108 +185,4 @@
         <strong>Follow</strong>
         <p>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fas fa-globe"></i></a>
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Dark Mode & Scroll Reveal Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('themeToggle');
-      if (!toggle) return;
-
-      // Function to apply dark mode
-      function applyDarkMode(isDark) {
-        document.body.classList.toggle('dark-mode', isDark);
-      }
-
-      // Load saved theme from localStorage
-      let savedTheme = localStorage.getItem('theme');
-      if (savedTheme === null) {
-        // First visit: respect system preference
-        savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'true' : 'false';
-      }
-      applyDarkMode(savedTheme === 'true');
-
-      // Update toggle UI (icon color)
-      if (savedTheme === 'true') {
-        toggle.querySelector('i').classList.add('fa-sun');
-        toggle.querySelector('i').classList.remove('fa-moon');
-      }
-
-      // Toggle click handler
-      toggle.addEventListener('click', () => {
-        const isDark = !document.body.classList.contains('dark-mode');
-        applyDarkMode(isDark);
-        localStorage.setItem('theme', isDark);
-
-        // Swap icon
-        const icon = toggle.querySelector('i');
-        if (isDark) {
-          icon.classList.add('fa-sun');
-          icon.classList.remove('fa-moon');
-        } else {
-          icon.classList.add('fa-moon');
-          icon.classList.remove('fa-sun');
-        }
-      });
-
-      // =======================
-      // Scroll reveal
-      // =======================
-      const reveals = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-      reveals.forEach(el => observer.observe(el));
-    });
-  </script>
-
-  <script>
-  const form = document.getElementById('contact-form');
-  const success = document.getElementById('form-success');
-  const error = document.getElementById('form-error');
-  const button = document.getElementById('send-btn');
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    button.disabled = true;
-    button.textContent = 'Sending…';
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      } else {
-        throw new Error('Submission failed');
-      }
-    } catch (err) {
-      error.style.display = 'block';
-      button.disabled = false;
-      button.textContent = 'Send message';
-    }
-  });
-</script>
-
-</body>
-</html>
+          <a
