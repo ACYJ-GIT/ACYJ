@@ -6,7 +6,9 @@
   gap: 120px;
   align-items: center;
   padding: 80px 60px;
-  position: relative;
+  position: relative;   
+  flex-wrap: wrap;
+  align-items: flex-start; /* top align columns */
 }
 
 .left {
