@@ -31,7 +31,7 @@
     /* Contact wrapper */
     .contact-wrapper {
       max-width: 680px;
-      margin: 2rem auto;
+      margin: 1rem auto;
       padding: 0 1.5rem;
     }
 
@@ -50,20 +50,31 @@
       gap: 1.5rem;
     }
 
+    /* === Label & Input Styling matching index.html === */
     label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #333;
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
-      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
     }
 
     input,
     textarea {
       font-family: inherit;
+      font-size: 0.95rem;
       padding: 0.6rem 0.75rem;
       border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 0.95rem;
+      border-radius: 0.35rem;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #d18b46;
+      box-shadow: 0 0 0 2px rgba(209, 139, 70, 0.2);
     }
 
     textarea {
@@ -92,6 +103,24 @@
     #form-error.show {
       display: block;
       opacity: 1;
+    }
+
+    /* Submit Button same as CV page */
+    #send-btn {
+      background-color: #d18b46;
+      color: #fff;
+      padding: 0.65rem 1.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.35rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+    }
+
+    #send-btn:hover {
+      background-color: #b06d2e;
     }
   </style>
 </head>
@@ -166,7 +195,7 @@
       </div>
 
       <!-- Submit Button -->
-      <button type="submit" class="btn" id="send-btn">Send message</button>
+      <button type="submit" id="send-btn">Send message</button>
     </form>
 
     <!-- SUCCESS MESSAGE -->
