@@ -124,76 +124,43 @@
       <input type="hidden" name="accessKey" value="sf_ank1a4kdeei3n2dd98fblik1" />
 
       <!-- Sender email -->
-      <label>
-        Your email
-        <input
-          type="email"
-          name="email"
-          placeholder="you@example.com"
-          required
-        />
+      <label>Your email
+        <input type="email" name="email" placeholder="you@example.com" required/>
       </label>
 
       <!-- Subject -->
-      <label>
-        Subject
-        <input
-          type="text"
-          name="subject"
-          placeholder="What’s this about?"
-          required
-        />
+      <label>Subject 
+        <input type="text" name="subject" placeholder="What’s this about?" required/>
       </label>
 
       <!-- Message -->
-      <label>
-        Message
-        <textarea
-          name="message"
-          placeholder="Your message…"
-          required
-        ></textarea>
+      <label>Message
+        <textarea name="message" placeholder="Your message. Kindly include your contact for me to get back to you." required></textarea>
       </label>
-
-      <!-- Optional contact -->
-      <label>
-        Contact (optional)
-        <input
-          type="text"
-          name="contact"
-          placeholder="Phone, LinkedIn, etc."
-        />
-      </label>
-
       
       <!-- Honeypot -->
       <div class="hp">
-        <label>
-          Company
+        <label>Company 
           <input type="text" name="company" autocomplete="off" tabindex="-1" />
         </label>
       </div>
     
-      <button type="submit" class="btn" id="send-btn">
-        Send message
-      </button>
-    </form>
-    
-    <!-- Success message (hidden by default) -->
-    <div id="form-success" style="display:none; margin-top:3rem;">
-      <h2>Thank you</h2>
-      <p>
-        Your message has been sent successfully.
-        I’ll get back to you as soon as I can.
-      </p>
-    </div>
-    
-    <!-- Error message -->
-    <div id="form-error" style="display:none; margin-top:2rem;">
-      <p>Something went wrong. Please try again later.</p>
-    </div>
-
       <button type="submit" class="cv-btn">Send message</button>
+      
+      <!-- Success message (hidden by default) -->
+      <div id="form-success" style="display:none; margin-top:3rem;">
+        <h2>Thank you</h2>
+        <p>
+          Your message has been sent successfully.
+          I’ll get back to you as soon as I can.
+        </p>
+      </div>
+      
+      <!-- Error message -->
+      <div id="form-error" style="display:none; margin-top:2rem;">
+        <p>Something went wrong. Please try again later.</p>
+      </div>
+        
     </form>
   </main>
 
