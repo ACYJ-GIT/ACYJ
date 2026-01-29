@@ -67,7 +67,9 @@
       <p>Share your message below, and I’ll respond as soon as I can.</p>
 
       <!-- Contact Form placed directly after paragraph -->
-      <form id="contact-form" class="contact-form" action="https://api.staticforms.xyz/submit" method="post">
+      <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post" >
+
+      <form id="contact-form" class="contact-form" action="https://api.staticforms.xyz/submit" method="post" data-sf-recaptcha="6Lfz2VksAAAAAMpgbDskBrQEiSjc0i8xlGkiE6ic">
         <!-- Static Forms access key -->
         <input type="hidden" name="accessKey" value="sf_ank1a4kdeei3n2dd98fblik1" />
 
@@ -211,5 +213,6 @@
     });
   </script>
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
