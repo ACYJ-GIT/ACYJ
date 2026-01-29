@@ -185,4 +185,96 @@
         <strong>Follow</strong>
         <p>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a
+          <a href="#"><i class="fas fa-globe"></i></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DARK MODE + SCROLL REVEAL -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('themeToggle');
+      if (!toggle) return;
+
+      function applyDarkMode(isDark) {
+        document.body.classList.toggle('dark-mode', isDark);
+      }
+
+      let savedTheme = localStorage.getItem('theme');
+      if (savedTheme === null) {
+        savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'true' : 'false';
+      }
+      applyDarkMode(savedTheme === 'true');
+
+      if (savedTheme === 'true') {
+        toggle.querySelector('i').classList.add('fa-sun');
+        toggle.querySelector('i').classList.remove('fa-moon');
+      }
+
+      toggle.addEventListener('click', () => {
+        const isDark = !document.body.classList.contains('dark-mode');
+        applyDarkMode(isDark);
+        localStorage.setItem('theme', isDark);
+
+        const icon = toggle.querySelector('i');
+        if (isDark) {
+          icon.classList.add('fa-sun');
+          icon.classList.remove('fa-moon');
+        } else {
+          icon.classList.add('fa-moon');
+          icon.classList.remove('fa-sun');
+        }
+      });
+
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+          });
+        },
+        { threshold: 0.2 }
+      );
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <!-- AJAX Form Submission -->
+  <script>
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    const error = document.getElementById('form-error');
+    const button = document.getElementById('send-btn');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      button.disabled = true;
+      button.textContent = 'Sending…';
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err) {
+        error.style.display = 'block';
+        button.disabled = false;
+        button.textContent = 'Send message';
+      }
+    });
+  </script>
+
+</body>
+</html>
