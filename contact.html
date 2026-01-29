@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anthony Chen</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Anthony Chen's blog: insights on AI, Agile, Product Management, and project delivery.">
+  <meta name="keywords" content="Anthony Chen, blog, AI, Agile, Product, Project Management">
+  <meta name="author" content="Anthony Chen | Contact Me">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Anthony Chen | Blog">
+  <meta property="og:description" content="Insights on AI, Agile, Product Management, and project delivery.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://acyj-git.github.io/ACYJ/blog.html">
+  <meta property="og:image" content="./img/Profile.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Index CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <style>
+    /* Form-specific tweaks to match your site look */
+    .contact-wrapper {
+      max-width: 680px;
+      margin: 6rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .contact-wrapper h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-wrapper p {
+      margin-bottom: 2.5rem;
+      opacity: 0.85;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    input,
+    textarea {
+      font-family: inherit;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    button {
+      align-self: flex-start;
+      margin-top: 1rem;
+      padding: 0.6rem 1.4rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    /* Honeypot: invisible but accessible-safe */
+    .hp {
+      position: absolute;
+      left: -9999px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="name">Anthony Chen</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="./index.html">ABOUT ME</a>
+      <a href="./cv.html">CV</a>
+      <a href="./blog.html">BLOG</a>
+      <a class="active" href="./contact.html">contact</a>
+      <button id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+<body>
+
+  <main class="contact-wrapper">
+    <h1>Get in touch</h1>
+    <p>
+      Have a question, opportunity, or just want to say hi?
+      Drop me a message below.
+    </p>
+
+    <form
+      action="https://api.staticforms.xyz/submit"
+      method="post"
+    >
+      <!-- Static Forms access key -->
+      <input type="hidden" name="accessKey" value="sf_ank1a4kdeei3n2dd98fblik1" />
+
+      <!-- Sender email -->
+      <label>
+        Your email
+        <input
+          type="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        />
+      </label>
+
+      <!-- Subject -->
+      <label>
+        Subject
+        <input
+          type="text"
+          name="subject"
+          placeholder="What’s this about?"
+          required
+        />
+      </label>
+
+      <!-- Message -->
+      <label>
+        Message
+        <textarea
+          name="message"
+          placeholder="Your message…"
+          required
+        ></textarea>
+      </label>
+
+      <!-- Optional contact -->
+      <label>
+        Contact (optional)
+        <input
+          type="text"
+          name="contact"
+          placeholder="Phone, LinkedIn, etc."
+        />
+      </label>
+
+      <!-- Honeypot field -->
+      <div class="hp">
+        <label>
+          Company
+          <input
+            type="text"
+            name="company"
+            autocomplete="off"
+            tabindex="-1"
+          />
+        </label>
+      </div>
+
+      <!-- Redirect after success -->
+      <input
+        type="hidden"
+        name="redirectTo"
+        value="https://acyj-git.github.io/ACYJ/thank-you.html"
+      />
+
+      <button type="submit">Send message</button>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="copyright">
+      <p>© 2026 by Anthony Chen.</p>
+      <p class="muted">Powered and secured by GitHub Pages</p>
+    </div>
+ 
+    <div class="footer-info">
+      <div>
+        <strong>Write</strong>
+        <p>???@mysite.com</p>
+      </div>
+      <div>
+        <strong>Follow</strong>
+        <p>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-globe"></i></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark Mode & Scroll Reveal Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('themeToggle');
+      if (!toggle) return;
+
+      // Function to apply dark mode
+      function applyDarkMode(isDark) {
+        document.body.classList.toggle('dark-mode', isDark);
+      }
+
+      // Load saved theme from localStorage
+      let savedTheme = localStorage.getItem('theme');
+      if (savedTheme === null) {
+        // First visit: respect system preference
+        savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'true' : 'false';
+      }
+      applyDarkMode(savedTheme === 'true');
+
+      // Update toggle UI (icon color)
+      if (savedTheme === 'true') {
+        toggle.querySelector('i').classList.add('fa-sun');
+        toggle.querySelector('i').classList.remove('fa-moon');
+      }
+
+      // Toggle click handler
+      toggle.addEventListener('click', () => {
+        const isDark = !document.body.classList.contains('dark-mode');
+        applyDarkMode(isDark);
+        localStorage.setItem('theme', isDark);
+
+        // Swap icon
+        const icon = toggle.querySelector('i');
+        if (isDark) {
+          icon.classList.add('fa-sun');
+          icon.classList.remove('fa-moon');
+        } else {
+          icon.classList.add('fa-moon');
+          icon.classList.remove('fa-sun');
+        }
+      });
+
+      // =======================
+      // Scroll reveal
+      // =======================
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
